@@ -1,3 +1,5 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
 {/* <div id="parent">
   <div id="child">
     <h1 id="h1tag"></h1>
@@ -8,8 +10,8 @@
 const item=React.createElement('div',{id:"parent"},
   React.createElement('div',{id:"child"},
     [
-      React.createElement('h1',{id:'h1tag'},"I am h1"),
-      React.createElement('h2',{id:'h2tag'},"I am h2")
+      React.createElement('h1',{id:'h1tag'},"Manoj is Best!"),
+      React.createElement('h2',{id:'h2tag'},"Number one or only one ")
     ]
   )
 );
