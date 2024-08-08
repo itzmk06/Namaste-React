@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Learning react from Namaste react",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "dev":"parcel index.html",
+    "build":"parcel build index.html"
   },
   "repository": {
     "type": "git",
