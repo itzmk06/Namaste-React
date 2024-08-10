@@ -1,3 +1,4 @@
+import Login from "./Login";
 const NavItem = () => {
   return (
     <div>
@@ -7,6 +8,7 @@ const NavItem = () => {
         <li>Cart</li>
         <li>Help</li>
         <li>Sign in</li>
+        <Login/>
       </ul>
     </div>
   );

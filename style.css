@@ -58,7 +58,7 @@ li{
     padding: 1vh;
     top: 5%;
     position: relative;
-    left: 50%;
+    left: 43%;
     right: 50%;
     transform: translate(-50%,-50%);
     display: flex;
@@ -66,7 +66,7 @@ li{
     width: 50%;
     height: 7vh;
     background-color: #dadada;
-    margin-top: 1vh;
+    margin-top: 3vh;
 }
 .search-bar:hover{
     box-shadow: 1px 1px 10px black;
@@ -174,4 +174,45 @@ li{
 .top-res:hover{
     font-style:oblique;
     box-shadow: 1px 2px 10px black;
+}
+.shimmer-container{
+    margin: 7vw;
+    margin-top: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+.shimmer-card{
+    border-radius: 1vw;
+    margin: 1vw;
+    margin-top: 0.5vh;
+    width: 40vh;
+    min-height: 49vh;
+    background-color: #dadada;
+}
+.shimmer-img{
+    padding: 1vh;
+    width: 100%;
+    height: 28vh;
+    background-color: #bebebe7a;
+    border-top-left-radius: 1vw;
+    border-top-right-radius: 1vw;
+}
+.login{
+    height: 5vh;
+    width: 10vh;
+    bottom: 1.5vh;
+    position: relative;
+}
+.login-btn{
+    cursor: pointer;
+    color: white;
+    border-radius: 1vw;
+    border: none;
+    background-color: gray;
+    outline: none;
+    width: 100%;
+    height: 100%;
+}
+.login-btn:hover{
+    box-shadow: 1px 1px 5px gray;
 }
