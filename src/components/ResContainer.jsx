@@ -7,11 +7,13 @@ const ResContainer = () => {
   const [topRes, setTopRes] = useState([]);
   const [searchText, setSearchText] = useState("");
   const [backup, SetBackup] = useState([]);
+
   useEffect(() => {
     fetchData();
   }, []);
   const fetchData = async () => {
     const data = await fetch(
+      // https://thingproxy.freeboard.io/fetch/
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.96340&lng=77.58550&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
     const jsonData = await data.json();
@@ -32,7 +34,7 @@ const ResContainer = () => {
       <button
         className="top-res"
         onClick={() =>
-          SetBackup(topRes.filter((res) => res.info.avgRating >= 4))
+          SetBackup(topRes.filter((res) => res.info.avgRating >= 4.5))
         }
       >
         Top Rated
