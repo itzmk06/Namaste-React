@@ -1,11 +1,11 @@
 import Header from "./Header";
-import Body from "./Body";
+import { Outlet } from "react-router-dom";
 
 const AppLayout = () => {
   return (
     <>
       <Header />
-      <Body />
+      <Outlet/>
     </>
   );
 };

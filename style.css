@@ -24,6 +24,7 @@ li{
     display: flex;
     width: 100%;
     height: 8vh;
+    margin-bottom: 5vh;
 }
 .logo{
     margin: 2vh;
@@ -69,7 +70,7 @@ li{
     margin-top: 3vh;
 }
 .search-bar:hover{
-    box-shadow: 1px 1px 10px black;
+    box-shadow: 1px 0.5px 5px black;
 }
 .search1{
     gap: 1vw;
@@ -173,7 +174,7 @@ li{
 }
 .top-res:hover{
     font-style:oblique;
-    box-shadow: 1px 2px 10px black;
+    box-shadow: 1px 0.5px 5px black;
 }
 .shimmer-container{
     margin: 7vw;
@@ -215,4 +216,76 @@ li{
 }
 .login-btn:hover{
     box-shadow: 1px 1px 5px gray;
+}
+.about .container h1{
+    margin-top: 5vh;
+    font-size: 1.5rem;
+}
+.about .container p{
+    width: 50%;
+    margin: 5vh;
+}
+.about .container ul{
+    margin: 5vh;
+    margin-top: 5vh;
+    width: 50%;
+}
+.about .container ul li{
+    margin-top: 3vh;
+}
+.about{
+    overflow: hidden;
+    /* background-color: red; */
+    height: calc(100%);
+    width: 100%;
+}
+.about .container{
+    position: relative;
+    left: 75%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+}
+
+.help .container h1{
+    margin-top: 5vh;
+    font-size: 1.5rem;
+}
+.help .container p{
+    width: 50%;
+    margin: 5vh;
+}
+.help .container ul{
+    margin: 5vh;
+    margin-top: 5vh;
+    width: 50%;
+}
+.help .container ul li{
+    margin-top: 3vh;
+}
+.help{
+    overflow: hidden;
+    /* background-color: red; */
+    height: calc(100%);
+    width: 100%;
+}
+.help .container{
+    position: relative;
+    left: 75%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+}
+.error-page{
+    top: 30%;
+    gap: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.error-page img{
+    width: 20vh;
+    height: 10vw;
+    object-fit: cover;
+    object-position: center;
 }
