@@ -1,5 +1,6 @@
 import "remixicon/fonts/remixicon.css";
 import { CDN_LINK } from "../utils/constants";
+import {Link} from "react-router-dom"
 
 const ResCard = ({ resData }) => {
   const name = resData.info.name;
@@ -9,8 +10,10 @@ const ResCard = ({ resData }) => {
   const rating = resData.info.avgRating;
   const time = resData.info.sla.deliveryTime;
   const locality = resData.info.locality;
+  const id = resData.info.id;
   return (
     <div className="res-card">
+      <Link to={"/restaurant/"+id}>
       <img className="res-img" src={CDN_LINK + imgId}></img>
       <div className="res-card-content">
         <h3 className="res-title">{name}</h3>
@@ -23,6 +26,7 @@ const ResCard = ({ resData }) => {
         <li>{cuisines.join(", ")}</li>
         <li>{locality}</li>
       </div>
+      </Link>
     </div>
   );
 };
