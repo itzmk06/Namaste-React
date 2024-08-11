@@ -298,13 +298,13 @@ li{
     margin: 0vh 10vh;
     width: 80%;
     height: 100%;
-    background-color: skyblue;
+    /* background-color: skyblue; */
 }
 .res-menu-1{
     padding: 5vh;
     gap: 3vh;
     height: 45vh;
-    background-color: orange;
+    /* background-color: orange; */
     margin: 3vh;
     display: flex;
     flex-direction: column;
@@ -341,21 +341,27 @@ li{
 }
 
 .menu-items{
+    left: 2.5%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin: 3vh 0vh;
     font-size: 0.8rem;
     padding: 5vh;
     position: relative;
-    top: -43%;
-    height: 100%;
+    top: -38%;
+    height: 60%;
     width: 100%;
-    background-color: gray;
+    /* background-color: gray; */
 }
 .menu-items img{
-    width: 30vh;
+    position: relative;
+    padding: 1vh;
+    left: -7%;
+    top: 15%;
+    background-color: #dadada;
+    width: 40vh;
     border-radius: 2vh;
-    height: 30vh;
+    min-height: 35vh;
     object-fit: cover;
     object-position: center;
 }
@@ -367,6 +373,7 @@ li{
     font-size: 1.2rem;
 }
 .menu-title{
+    margin-bottom: 10vh;
     padding: 5vh;
     font-size: 1.5rem;
     top: -35%;
@@ -374,13 +381,22 @@ li{
     z-index: 999;
 }
 .food-items{
-    padding: 0vh 5vh;
+    border-radius: 3vh;
+    position: relative;
+    left: 27%;
+    top: -113%;
+    width: 70%;
+    height: 90%;
+    background-color: #dadada;
+    padding: 5vh 5vh 15vh 5vh;
     display: flex;
     flex-direction: column;
     gap: 1vh;
 }
-
-
+a{
+    color: black;
+    text-decoration: none;
+}
 
 
 

@@ -14,7 +14,7 @@ const ResMenu = () => {
   }, []);
 
   const { id } = useParams();
-  console.log(id);
+  // console.log(id);
   const fetchMenu = async () => {
     const apiData = await fetch(
       "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.96340&lng=77.58550&restaurantId=".concat(
@@ -34,7 +34,7 @@ const ResMenu = () => {
     setFoodInfo(rec_menu);
   };
 
-  return main_info.length === 0 ? (
+  return main_info.length === 0&&res_info.length===0 ? (
     <Shimmer />
   ) : (
     <div className="res-menu">
@@ -73,22 +73,25 @@ const ResMenu = () => {
       </div>
       <h1 className="menu-title">{res_info.title}</h1>
       <div className="menu-items">
-        <img src={CDN_LINK + food_info.imageId} />
-        <div className="food-items">
-          <li>
-            <b>Item name: {food_info.name}</b>
-          </li>
-          {/* <li>{food_info.id}</li> */}
-          <li>{food_info.description}</li>
-          <li>
-            <b>Price:</b> ₹ {food_info.price / 100}
-          </li>
-          <li>
-            <b>Average Rating:</b> {food_info.ratings.aggregatedRating.rating}
-          </li>
-        </div>
+            {
+              res_info.itemCards.map((food_info)=>{
+                return<div className="menu-items" key={food_info.card.info.id}>
+                <img src={CDN_LINK+food_info.card.info.imageId} />
+                <div className="food-items">
+                <li><b>{food_info.card.info.name}</b></li>
+                {/* <li>{food_info.id}</li> */}
+                <li>{food_info.description}</li>
+                <li><b>Price:</b> ₹ {food_info.card.info.price/100}</li>
+                <li><b>Average Rating:</b> {food_info.card.info.ratings.aggregatedRating.rating}</li>
+                </div>
+              </div>
+              })
+            }
+
       </div>
     </div>
   );
 };
 export default ResMenu;
+
+

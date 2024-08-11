@@ -10,10 +10,8 @@ const ResContainer = () => {
 
   useEffect(() => {
     fetchData();
-    console.log("use effect is called")
   },[]);
 
-  console.log("res container is called")
 
   const fetchData = async () => {
     const data = await fetch(
