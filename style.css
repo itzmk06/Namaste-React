@@ -17,6 +17,7 @@ li{
     height: 100%;
 }
 .header{
+    /* position: fixed; */
     padding: 1vh;
     background-color: #dadada;
     align-items: center;
@@ -234,7 +235,6 @@ li{
     margin-top: 3vh;
 }
 .about{
-    overflow: hidden;
     /* background-color: red; */
     height: calc(100%);
     width: 100%;
@@ -242,7 +242,7 @@ li{
 .about .container{
     position: relative;
     left: 75%;
-    top: 40%;
+    top: 100%;
     transform: translate(-50%,-50%);
 }
 
