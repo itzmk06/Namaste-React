@@ -236,13 +236,13 @@ li{
 }
 .about{
     /* background-color: red; */
-    height: calc(100%);
+    height: calc(140%);
     width: 100%;
 }
 .about .container{
     position: relative;
     left: 75%;
-    top: 100%;
+    top: 27%;
     transform: translate(-50%,-50%);
 }
 
@@ -398,10 +398,68 @@ a{
     text-decoration: none;
 }
 
+.user{
+    margin: 5vh;
+    display: flex;
+    flex-direction:column ;
+    gap: 1vh;
+    border-radius: 3vh;
+    padding: 0vh 6vh;
+    width: 37vh;
+    height: 40vh;
+    background-color: #dadada;
+}
+.user img{
+    border-radius: 3vh;
+    object-fit: cover;
+    object-position: center;
+    width: 25vh;
+    height: 25vh;
+}
+.about h1{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
 
-
-
-
+.about> h1{
+    font-weight: 700;
+    position: relative;
+    left: 3%;
+    margin-bottom: 2vh;
+    font-size: 1.5rem;
+}
+.msg{
+    position: relative;
+    left: -2%;
+    top: -25%;
+    /* background-color: orange; */
+}
+.offline-page{
+    overflow: hidden;
+    margin-top: 8vh;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(128, 128, 128, 0.719),rgba(0, 0, 0, 0.623));
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 99;
+    display: flex;
+    transform: translate(-50%,-50%);
+}
+.offline-content{
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index:999;
+}
+.offline-content h1{
+    color: white;
+    opacity: 100%;
+}
 
 
 

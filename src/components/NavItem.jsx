@@ -1,7 +1,9 @@
 import Login from "./Login";
 import {Link} from "react-router-dom"
+import { useOnlineStatus } from "../utils/useOnlineStattus";
 
 const NavItem = () => {
+  const status=useOnlineStatus();
   return (
     <div>
       <ul className="nav-item">
@@ -9,7 +11,7 @@ const NavItem = () => {
         <li><Link to={"/about"}>About us</Link></li>
         <li><Link to={"/help"}>Help</Link></li>
         <li><Link to={"/cart"}>Cart</Link></li>
-        <li><Link to={"/signup"}>SignUp</Link></li>
+        <li><Link to={"/online"}>{status?"💚":"❤"}</Link></li>
         <Login/>
       </ul>
     </div>

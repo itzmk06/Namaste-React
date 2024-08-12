@@ -46,8 +46,9 @@ class About extends React.Component{
               possible.
             </li>
           </ul>
-          <UserClass name={"Ketaki"} />
         </div>
+        <h1>Meet Our Developers</h1>
+        <UserClass/>
       </div>
     );
   };

@@ -1,12 +1,16 @@
 import React from "react";
 import ReactDom from "react-dom/client"
-import About from "./components/About";
 import Error from "./components/Error";
 import { createBrowserRouter,RouterProvider } from "react-router-dom";
 import Help from "./components/Help";
 import AppLayout from "./components/AppLayout";
 import Body from "./components/Body";
 import ResMenu from "./components/ResMenu";
+import { lazy,Suspense } from "react";
+import Shimmer from "./components/Shimmer";
+
+const About=lazy(()=>import("./components/About"));
+const ResMenu=lazy(()=>import("./components/ResMenu"));
 
 const appRouter=createBrowserRouter(
     [
@@ -20,7 +24,7 @@ const appRouter=createBrowserRouter(
                 },
                 {
                     path:"/about",
-                    element:<About/>
+                    element:<Suspense fallback={<Shimmer/>}><About/></Suspense>
                 },
                 {
                     path:"/help",
@@ -28,9 +32,8 @@ const appRouter=createBrowserRouter(
                 },
                 {
                     path:"/restaurant/:id",
-                    element:<ResMenu/>
+                    element:<Suspense fallback={<Shimmer/>}><ResMenu/></Suspense>
                 }
-
             ],
             errorElement:<Error/>
         }
