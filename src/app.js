@@ -2,7 +2,6 @@ import React from "react";
 import ReactDom from "react-dom/client"
 import Error from "./components/Error";
 import { createBrowserRouter,RouterProvider } from "react-router-dom";
-import Help from "./components/Help";
 import AppLayout from "./components/AppLayout";
 import Body from "./components/Body";
 import ResMenu from "./components/ResMenu";
@@ -25,10 +24,6 @@ const appRouter=createBrowserRouter(
                 {
                     path:"/about",
                     element:<Suspense fallback={<Shimmer/>}><About/></Suspense>
-                },
-                {
-                    path:"/help",
-                    element:<Help/>
                 },
                 {
                     path:"/restaurant/:id",

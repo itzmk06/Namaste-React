@@ -33,19 +33,20 @@ const ResContainer = () => {
     <Shimmer />
   ) : (
     <div className="res-container">
+      <div className="flex justify-center items-center">
       <button
-        className="top-res"
+        className="top-res bg-zinc-600 text-zinc-100 m-3 px-3 py-2 rounded-lg"
         onClick={() =>
           SetBackup(topRes.filter((res) => res.info.avgRating >= 4.5))
         }
       >
         Top Rated
       </button>
-      <div className="search-bar">
-        <div className="search1">
-          <i className="ri-search-line s-item-1"></i>
+      <div className="search-bar bg-zinc-300 flex  w-[33rem] rounded-md text-zinc-800">
+        <div className="search1 flex  w-[30rem] justify-center items-center">
+          <i className="ml-3 ri-search-line s-item-1 text-zinc-600 font-semibold text-xl"></i>
           <input
-            className="s-input"
+            className="s-input w-[27rem] py-2 mx-2 outline-none bg-zinc-300"
             type="text"
             placeholder="Type a command or search"
             value={searchText}
@@ -62,20 +63,27 @@ const ResContainer = () => {
             }}
           />
         </div>
-        <div className="search2">
+        <div className="search2 flex justify-end mr-4 items-center text-zinc-600">
           <i className="ri-windows-fill s-item-2"></i>
           <h5>+K</h5>
         </div>
       </div>
-      <h1 className="res-head-1">
+      </div>
+      <h1 className="res-head-1 text-center text-xl">
         Restaurant with online food delivery in Mysore
       </h1>
       {backup.length === 0 ? (
-        <h3>No result found for {searchText}</h3>
+        <h3 className="text-xl translate-x-1/3">No result found for {searchText}</h3>
       ) : (
+          <div className="grid grid-cols-4 gap-2  mt-2">
+            {    
         backup.map((res, index) => {
-          return <ResCard key={index} resData={res} />;
+          return(
+              <ResCard key={index} resData={res} />
+          )
         })
+            }
+          </div>
       )}
     </div>
   );

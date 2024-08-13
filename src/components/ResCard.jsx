@@ -12,14 +12,14 @@ const ResCard = ({ resData }) => {
   const locality = resData.info.locality;
   const id = resData.info.id;
   return (
-    <div className="res-card">
+    <div className="res-card h-[23rem]  bg-zinc-300 w-[19rem] justify-center items-center px-2 py-2 rounded-xl my-2 mx-4 ">
       <Link to={"/restaurant/"+id}>
-      <img className="res-img" src={CDN_LINK + imgId}></img>
-      <div className="res-card-content">
-        <h3 className="res-title">{name}</h3>
-        <li>{cost}</li>
-        <div className="res-star">
-          <i className="ri-star-fill"></i>
+      <img className="res-img w-[18rem] h-52 rounded-xl object-cover object-center" src={CDN_LINK + imgId}></img>
+      <div className="res-card-content flex flex-col font-light">
+        <h3 className="res-title font-bold text-lg">{name}</h3>
+        <li className="font-semibold">{cost}</li>
+        <div className="res-star flex gap-2 font-medium">
+          <i className="ri-star-fill text-yellow-500"></i>
           <li>{rating}</li>
           <li>~ {time} min</li>
         </div>

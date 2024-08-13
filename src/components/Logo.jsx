@@ -1,13 +1,12 @@
 import { LOGO } from "../utils/constants";
-
 const Logo = () => {
   return (
-    <div className="logo">
+    <div className="logo m-3 flex justify-center items-center">
       <img
-        className="logo"
+        className="logo w-16"
         src={LOGO}
       ></img>
-      <h1 className="logo-head">Zesty </h1>
+      <h1 className="logo-head text-[2.4rem] ml-2">Zesty </h1>
     </div>
   );
 };

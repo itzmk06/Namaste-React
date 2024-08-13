@@ -33,12 +33,13 @@ const ResMenu = () => {
   return !jsonData || !main_info?.name || !res_info?.title ? (
     <Shimmer />
   ) : (
-    <div className="res-menu">
-      <div className="res-menu-1">
-        <h2>{main_info.name}</h2>
-        <img src={CDN_LINK + main_info.cloudinaryImageId} alt={main_info.name} />
+    <div className="res-menu text-zinc-800 p-1 w-[78%] flex flex-col translate-x-[15%]">
+      <div className="flex ">
+      <div className="res-menu-1 ">
+        <h2 className="text-2xl  my-5 font-semibold">{main_info.name}</h2>
+        <img className="p-1 bg-zinc-300 w-80 h-64 object-cover object-center rounded-lg mx-10" src={CDN_LINK + main_info.cloudinaryImageId} alt={main_info.name} />
       </div>
-      <div className="res-menu-2">
+      <div className="res-menu-2 h-60   w-[35rem] text-xl flex flex-col gap-3 rounded-lg px-5 py-2 mt-20 bg-zinc-300">
         <h2>
           <b>Average Rating: </b>
           {main_info.avgRating}
@@ -64,16 +65,17 @@ const ResMenu = () => {
           {main_info.sla?.deliveryTime} min
         </h2>
       </div>
-      <h1 className="menu-title">{res_info.title}</h1>
+      </div>
+      <h1 className="menu-title my-5 text-2xl font-semibold">{res_info.title}</h1>
       <div className="menu-items">
         {res_info.itemCards && Array.isArray(res_info.itemCards) ? (
           res_info.itemCards.map((food_info) => (
-            <div className="menu-items" key={food_info.card?.info?.id}>
-              <img
+            <div className="menu-items flex gap-3 my-5 items-center" key={food_info.card?.info?.id}>
+              <img className="bg-zinc-300 p-1 w-80 h-60 object-cover object-center rounded-lg mx-10"
                 src={CDN_LINK + food_info.card?.info?.imageId}
                 alt={food_info.card?.info?.name}
               />
-              <div className="food-items">
+              <div className="food-items items-center flex flex-col text-lg bg-zinc-300 w-[45%] h-40 rounded-lg px-3 py-2">
                 <li>
                   <b>{food_info.card?.info?.name}</b>
                 </li>
