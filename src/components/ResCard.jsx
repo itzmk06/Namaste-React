@@ -31,4 +31,15 @@ const ResCard = ({ resData }) => {
   );
 };
 
+export const withPromotedLabel=(ResCard)=>{
+  return (props)=>{
+    return(
+      <div>
+        <label className="text-sm absolute font-semibold text-zinc-200 bg-zinc-700 px-2 py-1 rounded-lg">Top Rated</label>
+        <ResCard {...props}/>
+      </div>
+    )
+  };
+};
+
 export default ResCard;

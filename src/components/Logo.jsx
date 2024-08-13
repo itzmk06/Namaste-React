@@ -6,7 +6,7 @@ const Logo = () => {
         className="logo w-16"
         src={LOGO}
       ></img>
-      <h1 className="logo-head text-[2.4rem] ml-2">Zesty </h1>
+      <h1 className="logo-head text-[2.3rem] ml-2">Zesty </h1>
     </div>
   );
 };

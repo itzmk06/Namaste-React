@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import ResCard from "./ResCard";
+import ResCard,{withPromotedLabel} from "./ResCard";
 import { useState } from "react";
 import Shimmer from "./Shimmer";
 
@@ -7,6 +7,7 @@ const ResContainer = () => {
   const [topRes, setTopRes] = useState([]);
   const [searchText, setSearchText] = useState("");
   const [backup, SetBackup] = useState([]);
+  const WithPromotedResCard=withPromotedLabel(ResCard);
 
   useEffect(() => {
     fetchData();
@@ -26,8 +27,8 @@ const ResContainer = () => {
     SetBackup(
       jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
-    );
-  };
+      );
+    };
 
   return topRes.length === 0 ? (
     <Shimmer />
@@ -78,9 +79,14 @@ const ResContainer = () => {
           <div className="grid grid-cols-4 gap-2  mt-2">
             {    
         backup.map((res, index) => {
-          return(
+            {
+            return   res.info.avgRating>=4.5?(
+              <WithPromotedResCard resData={res} key={index} />
+            ):(
               <ResCard key={index} resData={res} />
-          )
+            )
+            }
+
         })
             }
           </div>
