@@ -11,4 +11,6 @@ html,body{
 li{
     list-style-type: none;
 }
- 
+.logo{
+    font-family: "Salsa", cursive;
+}

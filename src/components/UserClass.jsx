@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import UserContext from "../utils/UserContext";
+
 class UserClass extends React.Component{
     constructor(props){
         super(props);
@@ -24,6 +26,13 @@ class UserClass extends React.Component{
         const {name,location,html_url,avatar_url}=this.state;
         return(
             <div className="user">
+                <UserContext.Consumer>
+                    {
+                        (data)=>{
+                            console.log(data.name)
+                        }
+                    }
+            </UserContext.Consumer>
                 <img src={avatar_url}/>
                 <h1>{name}</h1>
                 <h1>{location}</h1>

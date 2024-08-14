@@ -1,5 +1,3 @@
-import UserClass from "./UserClass";
-
 const User=({name,age})=>{
     return(
         <div className="user">

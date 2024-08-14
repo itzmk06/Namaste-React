@@ -73,8 +73,8 @@ const ResMenu = () => {
       </div>
       </div>
       {
-        item_info.map((item)=>{
-          return  <ResCategory item={item} show_info={false}/>
+        item_info.map((item,index)=>{
+          return  <ResCategory key={index} item={item} show_info={false}/>
         })
       }
 

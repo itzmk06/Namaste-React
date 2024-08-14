@@ -5,9 +5,9 @@ import { createBrowserRouter,RouterProvider } from "react-router-dom";
 import AppLayout from "./components/AppLayout";
 import Body from "./components/Body";
 import ResMenu from "./components/ResMenu";
-import { lazy,Suspense } from "react";
+import { lazy,Suspense} from "react";
 import Shimmer from "./components/Shimmer";
-
+import UserContext from "./utils/UserContext";
 const About=lazy(()=>import("./components/About"));
 const ResMenu=lazy(()=>import("./components/ResMenu"));
 
