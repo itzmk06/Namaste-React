@@ -10,6 +10,7 @@ import Shimmer from "./components/Shimmer";
 import UserContext from "./utils/UserContext";
 const About=lazy(()=>import("./components/About"));
 const ResMenu=lazy(()=>import("./components/ResMenu"));
+import Cart from "./components/Cart";
 
 const appRouter=createBrowserRouter(
     [
@@ -28,6 +29,10 @@ const appRouter=createBrowserRouter(
                 {
                     path:"/restaurant/:id",
                     element:<Suspense fallback={<Shimmer/>}><ResMenu/></Suspense>
+                },
+                {
+                    path:"/Cart",
+                    element:<Suspense fallback={<Shimmer/>}><Cart/></Suspense>
                 }
             ],
             errorElement:<Error/>

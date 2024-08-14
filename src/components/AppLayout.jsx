@@ -4,6 +4,8 @@ import Offline from "./Offline";
 import { useOnlineStatus } from "../utils/useOnlineStattus";
 import { useState,useEffect,useContext} from "react";
 import UserContext from "../utils/UserContext";
+import { Provider } from "react-redux";
+import appStore from "../utils/appStore";
 
 const AppLayout = () => {
   const status = useOnlineStatus();
@@ -22,12 +24,14 @@ const AppLayout = () => {
     setUserName(data);
   }, []);
   return status ? (
-    <UserContext.Provider value={userName}>
+   <Provider store={appStore}>
+     <UserContext.Provider value={userName}>
     <>
       <Header />
       <Outlet />
     </>
     </UserContext.Provider>
+   </Provider>
   ) : (
     <>
       <Header />
